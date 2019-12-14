@@ -1,5 +1,6 @@
+# git rm -r --cached .
 # idea
-.idea
+.idea/
 *.iml
 **/*.iml
 
