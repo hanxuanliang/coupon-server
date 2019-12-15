@@ -6,3 +6,6 @@
 
 # maven
 */target/**
+
+# password ignore
+coupon-server-service/coupon-service-template/src/main/resources/application.yml
