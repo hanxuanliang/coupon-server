@@ -10,6 +10,7 @@
   <modules>
     <module>coupon-server-eureka</module>
     <module>coupon-server-gateway</module>
+    <module>coupon-server-service</module>
   </modules>
   <name>coupon-server</name>
 
