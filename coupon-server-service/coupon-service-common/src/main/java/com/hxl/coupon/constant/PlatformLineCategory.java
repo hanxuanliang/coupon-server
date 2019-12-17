@@ -19,8 +19,8 @@ public enum PlatformLineCategory {
      * SKYCAT: 天猫 平台
      * SKYDOG: 天狗 平台
      */
-    SKYCAT("天猫", 101),
-    SKYDOG("天狗", 102);
+    SKYCAT("天猫", 2006),
+    SKYDOG("天狗", 2007);
 
     private String description;
 

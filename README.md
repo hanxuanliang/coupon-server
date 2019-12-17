@@ -1,2 +1,3 @@
 # coupon-server
-WeChat applet mall coupon server, Microservices projects established using springcloud
+
+电商微信小程序优惠券后端，以微服务的形式对优惠券领取和分发功能进行实现
