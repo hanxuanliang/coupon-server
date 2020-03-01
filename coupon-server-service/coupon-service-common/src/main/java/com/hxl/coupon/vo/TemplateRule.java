@@ -1,6 +1,6 @@
 package com.hxl.coupon.vo;
 
-import com.hxl.coupon.constant.PeriodType;
+import com.hxl.coupon.enums.PeriodType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -16,16 +16,18 @@ import org.apache.commons.lang3.StringUtils;
 @AllArgsConstructor
 public class TemplateRule {
 
+    /** 优惠券过期规则 */
     private Expiration expiration;
+
     private Discount discount;
 
     /** 每个人最多可以领取几张优惠券 */
     private Integer limitation;
 
+    /** 使用范围: 地域 + 商品类型 */
     private Usage usage;
-    /** 权重（可以和哪些优惠券叠加使用，同一类的优惠券一定不可能叠加使用）：
-     * list[] ，优惠券的唯一编码
-     */
+
+    /** 权重(可以和哪些优惠券叠加使用, 同一类的优惠券一定不能叠加): list[], 优惠券的唯一编码 */
     private String weight;
 
     public boolean validate() {

@@ -1,6 +1,6 @@
 package com.hxl.coupon.converter;
 
-import com.hxl.coupon.constant.DistributeTarget;
+import com.hxl.coupon.enums.DistributeTarget;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Convert;

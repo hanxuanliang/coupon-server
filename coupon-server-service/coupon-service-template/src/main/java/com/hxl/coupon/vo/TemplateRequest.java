@@ -1,8 +1,8 @@
 package com.hxl.coupon.vo;
 
-import com.hxl.coupon.constant.CouponCategory;
-import com.hxl.coupon.constant.DistributeTarget;
-import com.hxl.coupon.constant.PlatformLineCategory;
+import com.hxl.coupon.enums.CouponCategory;
+import com.hxl.coupon.enums.DistributeTarget;
+import com.hxl.coupon.enums.PlatformLineCategory;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

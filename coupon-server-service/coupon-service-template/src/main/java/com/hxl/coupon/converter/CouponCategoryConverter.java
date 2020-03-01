@@ -1,6 +1,6 @@
 package com.hxl.coupon.converter;
 
-import com.hxl.coupon.constant.CouponCategory;
+import com.hxl.coupon.enums.CouponCategory;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Convert;

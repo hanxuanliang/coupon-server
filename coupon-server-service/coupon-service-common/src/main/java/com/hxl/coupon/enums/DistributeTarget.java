@@ -1,4 +1,4 @@
-package com.hxl.coupon.constant;
+package com.hxl.coupon.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,26 +7,25 @@ import java.util.Objects;
 import java.util.stream.Stream;
 
 /**
- * @Description: 平台线枚举，不同平台的优惠券共用一个系统，
- *      可能存在平台间的互相调用（比如：天猫，淘宝）
+ * @Description: 优惠券分发目标
  * @Author: hanxuanliang
- * @Date: 2019/12/15 15:08
+ * @Date: 2019/12/15 15:17
  */
 @Getter
 @AllArgsConstructor
-public enum PlatformLineCategory {
+public enum DistributeTarget {
     /**
-     * SKYCAT: 天猫 平台
-     * SKYDOG: 天狗 平台
+     * SINGLE: 单用户领取
+     * MULTI: 批量分发给多个用户
      */
-    SKYCAT("天猫", 2006),
-    SKYDOG("天狗", 2007);
+    SINGLE("用户领取", 6001),
+    MULTI("分发用户", 6002);
 
     private String description;
 
     private Integer code;
 
-    public static PlatformLineCategory of(Integer code) {
+    public static DistributeTarget of(Integer code) {
         Objects.requireNonNull(code);
         return Stream.of(values())
                 .filter(bean -> bean.code.equals(code))

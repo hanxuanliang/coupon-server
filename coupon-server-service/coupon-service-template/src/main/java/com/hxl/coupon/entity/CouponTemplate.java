@@ -1,9 +1,9 @@
 package com.hxl.coupon.entity;
 
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import com.hxl.coupon.constant.CouponCategory;
-import com.hxl.coupon.constant.DistributeTarget;
-import com.hxl.coupon.constant.PlatformLineCategory;
+import com.hxl.coupon.enums.CouponCategory;
+import com.hxl.coupon.enums.DistributeTarget;
+import com.hxl.coupon.enums.PlatformLineCategory;
 import com.hxl.coupon.converter.CouponCategoryConverter;
 import com.hxl.coupon.converter.DistributeTargetConverter;
 import com.hxl.coupon.converter.PlatformLineConverter;

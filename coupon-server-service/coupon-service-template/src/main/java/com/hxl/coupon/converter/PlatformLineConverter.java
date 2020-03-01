@@ -1,6 +1,6 @@
 package com.hxl.coupon.converter;
 
-import com.hxl.coupon.constant.PlatformLineCategory;
+import com.hxl.coupon.enums.PlatformLineCategory;
 
 import javax.persistence.AttributeConverter;
 import javax.persistence.Convert;

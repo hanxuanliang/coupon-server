@@ -12,6 +12,7 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @Date: 2019/12/15 14:39
  */
 @EnableScheduling
+// 对某些列进行自动赋值
 @EnableJpaAuditing
 @EnableEurekaClient
 @SpringBootApplication

@@ -1,4 +1,4 @@
-package com.hxl.coupon.constant;
+package com.hxl.coupon.enums;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -7,27 +7,25 @@ import java.util.Objects;
 import java.util.stream.Stream;
 
 /**
- * @Description: 优惠券枚举分类
+ * @Description: 优惠券有效期类型枚举
  * @Author: hanxuanliang
- * @Date: 2019/12/15 14:56
+ * @Date: 2019/12/15 15:39
  */
 @Getter
 @AllArgsConstructor
-public enum CouponCategory {
+public enum PeriodType {
+
     /**
-     * full_reduction: 满减券
-     * discount: 折扣券
-     * immediate_discount: 立减券
+     * REGULAR_PERIOD: 给定出准确固定的日期期限
+     * SHIFT_PERIOD: 以领取之日开始计算日期期限
      */
-    FULL_REDUCTION("满减券", "2001"),
-    DISCOUNT("折扣券", "2002"),
-    IMMEDIATE_DISCOUNT("立减券", "2003");
+    REGULAR_PERIOD("固定的日期期限", 2010),
+    SHIFT_PERIOD("变动(以领取之日开始计算日期期限)", 2011);
 
     private String description;
+    private Integer code;
 
-    private String code;
-
-    public static CouponCategory of(String code) {
+    public static PeriodType of(Integer code) {
         Objects.requireNonNull(code);
         return Stream.of(values())
                 .filter(bean -> bean.code.equals(code))
