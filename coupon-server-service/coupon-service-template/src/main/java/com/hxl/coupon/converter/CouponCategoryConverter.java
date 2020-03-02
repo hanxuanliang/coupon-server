@@ -3,16 +3,17 @@ package com.hxl.coupon.converter;
 import com.hxl.coupon.enums.CouponCategory;
 
 import javax.persistence.AttributeConverter;
-import javax.persistence.Convert;
+import javax.persistence.Converter;
 
 /**
  * @Description: 优惠券分类枚举类属性转换器
+ *      将表字段映射为实体类的字段
  *      第一个参数X: 实体属性的类型
  *      第二个参数Y: 数据库字段类型
  * @Author: hanxuanliang
  * @Date: 2019/12/17 15:45
  */
-@Convert
+@Converter
 public class CouponCategoryConverter implements AttributeConverter<CouponCategory, String> {
     
     /**
