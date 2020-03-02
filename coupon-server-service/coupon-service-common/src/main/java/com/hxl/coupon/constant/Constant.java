@@ -9,7 +9,7 @@ public class Constant {
     /** Kafka消息的Topic */
     public static final String TOPIC = "user_coupon_op";
 
-    public static final class RedisPredfix {
+    public static final class RedisPrefix {
         /** 优惠券码的key前缀 */
         public static final String COUPON_TEMPLATE = "coupon_template_code_";
 

@@ -56,7 +56,7 @@ public class AsyncServiceImpl implements IAsyncService {
         Set<String> couponCodes = buildCouponCode(template);
 
         // 插入redis中
-        String redisKey = String.format("%s%s", Constant.RedisPredfix.COUPON_TEMPLATE, template.getId().toString());
+        String redisKey = String.format("%s%s", Constant.RedisPrefix.COUPON_TEMPLATE, template.getId().toString());
         log.info("Push CouponCode To Redis: {}",
                 redisTemplate.opsForList().rightPushAll(redisKey, couponCodes));
         // 把template的状态修改，并插入到mysql中
