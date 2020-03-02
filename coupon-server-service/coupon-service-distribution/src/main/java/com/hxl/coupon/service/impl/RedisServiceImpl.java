@@ -117,6 +117,8 @@ public class RedisServiceImpl implements IRedisService {
 
         String redisKey = String.format("%s%s", Constant.RedisPrefix.COUPON_TEMPLATE, templateId.toString());
         // 因为优惠券码不存在顺序关系, 左边 pop 或右边 pop, 没有影响
+        // 【此处的List和为什么传入templateId有关系：
+        // 因为构建优惠券的模板系统中就是作为List插入的，这和优惠券3种状态的redisKey不一样，它们是map结构】
         String couponCode = redisTemplate.opsForList().leftPop(redisKey);
 
         log.info("Acquire Coupon Code: {}, {}, {}",
@@ -173,8 +175,7 @@ public class RedisServiceImpl implements IRedisService {
 
         log.info("Add {} Coupons To Cache: {}, {}",
                 needCachedObject.size(), userId, redisKey);
-
-        // 设置随机的过期时间
+        // 设置随机的过期时间【凡是用户的缓存信息我们都会做一个随机过期时间，防止缓存雪崩】
         redisTemplate.expire(redisKey, getRandomExpirationTime(1, 2), TimeUnit.SECONDS);
 
         return needCachedObject.size();

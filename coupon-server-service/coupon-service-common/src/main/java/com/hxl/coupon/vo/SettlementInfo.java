@@ -24,7 +24,6 @@ public class SettlementInfo {
 
     /* 是否使结算生效，即核销  True为核销；False为结算【其实也就是用不用，用了就是核算并销毁；没用就是仅仅只是计算】*/
     private Boolean employ;
-
     /* 折扣后的价格 */
     private Double cost;
 

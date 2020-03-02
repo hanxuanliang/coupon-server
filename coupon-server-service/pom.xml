@@ -15,6 +15,7 @@
     <module>coupon-service-common</module>
     <module>coupon-service-template</module>
     <module>coupon-service-distribution</module>
+    <module>coupon-service-settlement</module>
   </modules>
 
 </project>
